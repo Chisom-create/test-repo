@@ -1,48 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" >
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone Calculator</title>
+    <title>Todo List App</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
-    <section class="calculator">
-        <form >
-            <input type="text" class="screen" placeholder="0">
-        </form>
-        <div class="buttons">
-            <button class="btn btn-grey btn-clear" data-num="AC">AC</button>
-            <button class="btn btn-grey" data-num="+/-">+/-</button>
-            <button class="btn btn-grey" data-num="%">%</button>
-            <button class="btn btn-yellow" data-num="/">/</button>
-
-            <button class="btn btn-black" data-num="7">7</button>
-            <button class="btn btn-black" data-num="8">8</button>
-            <button class="btn btn-black" data-num="9">9</button>
-            <button class="btn btn-yellow" data-num="*">*</button>
-
-
-            <button class="btn btn-black" data-num="4">4</button>
-            <button class="btn btn-black" data-num="5">5</button>
-            <button class="btn btn-black" data-num="6">6</button>
-            <button class="btn btn-yellow" data-num="-">-</button>
-
-
-            <button class="btn btn-black" data-num="1">1</button>
-            <button class="btn btn-black" data-num="2">2</button>
-            <button class="btn btn-black" data-num="3">3</button>
-            <button class="btn btn-yellow" data-num="+">+</button>
-
-
-            <button class="btn btn-black" data-num="0">0</button>
-            <button class="btn btn-black" data-num="0">00</button>
-            <button class="btn btn-black" data-num=".">.</button>
-            <button class="btn btn-yellow btn-equal" data-num="=">=</button>
-
+    <div class="wrapper">
+        <div class="task-input">
+            <img src="bar-icons.png" alt="icons">
+            <input type="text" placeholder="Add a new task">
         </div>
-    </section>
+        <div class="controls">
+            <div class="filters">
+                <span id="all" class="active">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+            </div>
+            <button class="clear-btn">Clear All</button>
+        </div>
+        <ul class="task-box">
+            <li class="task">
+                <label for="1">
+                    <input type="checkbox" id="1">
+                    <p>Renew my gym membership</p>
+                </label>
+                <div class="settings">
+                    <i class="uil uil-epllpsis-h"></i>
+                    <ul class="task-menu">
+                        <li><i class="uil uil-pen"></i>Edit</li>
+                        <li><i class="uil uil-trash"></i>Delete</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="task">
+                <label for="1">
+                    <input type="checkbox" id="1">
+                    <p>Create a new app</p>
+                </label>
+                <div class="settings">
+                    <i class="uil uil-epllpsis-h"></i>
+                </div>
+            </li>
+            <li class="task">
+                <label for="1">
+                    <input type="checkbox" id="1">
+                    <p>Go for my Doctor's appointment</p>
+                </label>
+                <div class="settings">
+                    <i class="uil uil-epllpsis-h"></i>
+                </div>
+            </li>
+            <li class="task">
+                <label for="1">
+                    <input type="checkbox" id="1">
+                    <p>Buy a beach house</p>
+                </label>
+                <div class="settings">
+                    <i class="uil uil-epllpsis-h"></i>
+                </div>
+            </li>
+            <li class="task">
+                <label for="1">
+                    <input type="checkbox" id="1">
+                    <p>Buy a new phone</p>
+                </label>
+                <div class="settings">
+                    <i class="uil uil-epllpsis-h"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
